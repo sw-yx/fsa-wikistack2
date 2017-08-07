@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3> Page</h3>
+  <h3>{{ page.dataValues.title  }} <small> (<a href="{{ page.dataValues.title }}/similar">Similar</a>)</small></h3>
+  <h4>by <a href="/users/{{user.id}}">{{user.name}}</a></h4>
+  <div>Tags: 
+    {% for tag in tags %}
+      <a href="/wiki/search?tag={{tag}}">{{ tag }} </a>
+    {% endfor %}
+  </div>
+  <hr/>
+  <!--<div>By <a href="/users/{{user.id}}">{{user.name}}</a></div>-->
+  <div class="page-body">{% autoescape false %}{{ page.renderedContent }}{% endautoescape %}</div>
+  <hr/>
+  <a href="{{ page.dataValues.urlTitle }}/edit" class="btn btn-primary">edit this page</a>
+  <a href="{{ page.dataValues.urlTitle }}/delete" class="btn btn-danger">delete this page</a>
+{% endblock %}

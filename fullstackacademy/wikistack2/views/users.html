@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h3> User</h3>
+  <ul>
+    {% for user in users %}
+        <li><a href="/users/{{ user.id }}">{{ user.name }}</a></li>
+    {% endfor %}
+    </ul>
+
+
+
+
+  <!--<h3>{{ data.title  }} <small> (<a href="{{ data.title }}/similar">Similar</a>)</small></h3>
+  <h4>by <a href="PLACEHOLDER-AUTHOR-URL">PLACEHOLDER AUTHOR NAME</a></h4>
+  <div>PLACEHOLDER TAG LIST</div>
+  <hr/>
+  <div>PLACEHOLDER AUTHOR NAME WITH LINK TO AUTHOR PAGE</div>
+  <div class="page-body">{{ data.content}}</div>
+  <hr/>
+  <a href="PLACEHOLDER_URL_TITLE/edit" class="btn btn-primary">edit this page</a>
+  <a href="PLACEHOLDER_URL_TITLE/delete" class="btn btn-danger">delete this page</a>-->
+{% endblock %}

@@ -1,0 +1,23 @@
+{
+  "name": "wikistack2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e html,js,css app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "marked": "^0.3.6",
+    "morgan": "^1.8.2",
+    "nunjucks": "^3.0.1",
+    "nunjucks-autoescape": "^1.0.1",
+    "pg": "^7.1.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.4.2"
+  }
+}
